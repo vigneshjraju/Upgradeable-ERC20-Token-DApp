@@ -24,7 +24,7 @@ This project implements an **Upgradeable ERC20 Token** smart contract using the 
 ```
 ERC-20_Token/
 ├── contracts/               # Smart contracts (TokenUpgradeable.sol, TokenUpgradeableV2.sol)
-├── scripts/                # Manual deployment scripts (deployManual.js, grantMinter.js)
+├── scripts/                # Manual deployment scripts (deployManual.js, grantMinter.js,upgrade.js)
 ├── test/                   # Hardhat test scripts
 ├── frontend/erc-20/        # React app (connect, mint, burn, redeem)
 ├── .env                    # Private key and RPC URL
@@ -58,6 +58,15 @@ npx hardhat run scripts/deployManual.js --network sepolia
 
 ```bash
 npx hardhat run scripts/grantMinter.js --network sepolia
+```
+
+###  Upgrade to V2
+
+```bash
+After modifying TokenUpgradeableV2.sol, run:
+
+npx hardhat run scripts/upgrade.js --network sepolia
+
 ```
 
 ### 5. Run Frontend
